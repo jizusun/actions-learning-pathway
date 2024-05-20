@@ -65,3 +65,11 @@ jobs:
       - name: deploy
         id: deployment
         uses: actions/deploy-pages@v1
+      
+      - name: Adding markdown
+        run: |
+          echo '### Hello world! 🚀 ${{ steps.deployment.outputs.page_url }} ' >> $GITHUB_STEP_SUMMARY
+
+
+
+
